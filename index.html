@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- this div is for taking inout and profile info -->
+<div class="container">
+  <div class="user-details">
+    <img src="https://placekitten.com/100/100" alt="User Image" width="100" height="100" id="user-avatar">
+    <div>
+      <h2> <span id="displayedUsername">John Doe</span></h2>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>123 Main St, City</strong> </p>
+    </div>
+  </div>
+
+  <div>
+    <label for="username" ><b>Username:</b></label>
+    <input type="text" id="username" placeholder="Enter the GihubUsername">
+    <button onclick="fetchRepositories()">Fetch Repositories</button>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader"></div>
+<!-- Repositories section -->
+  <div class="project-cards" id="repositories-list">
+  </div>
+
+  <!-- Pagination activity goes here -->
+  <div class="pagination" id="pagination">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
